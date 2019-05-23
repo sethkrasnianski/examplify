@@ -2,15 +2,21 @@ type Blog @model {
   id: ID!
   name: String!
   posts: [Post] @connection(name: "BlogPosts")
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
 }
 type Post @model {
   id: ID!
   title: String!
   blog: Blog @connection(name: "BlogPosts")
   comments: [Comment] @connection(name: "PostComments")
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
 }
 type Comment @model {
   id: ID!
   content: String
   post: Post @connection(name: "PostComments")
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
 }
