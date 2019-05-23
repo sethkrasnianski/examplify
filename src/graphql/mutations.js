@@ -9,9 +9,13 @@ export const createBlog = `mutation CreateBlog($input: CreateBlogInput!) {
       items {
         id
         title
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -23,9 +27,13 @@ export const updateBlog = `mutation UpdateBlog($input: UpdateBlogInput!) {
       items {
         id
         title
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -37,9 +45,13 @@ export const deleteBlog = `mutation DeleteBlog($input: DeleteBlogInput!) {
       items {
         id
         title
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -53,14 +65,20 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
       posts {
         nextToken
       }
+      createdAt
+      updatedAt
     }
     comments {
       items {
         id
         content
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -74,14 +92,20 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
       posts {
         nextToken
       }
+      createdAt
+      updatedAt
     }
     comments {
       items {
         id
         content
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -95,14 +119,20 @@ export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
       posts {
         nextToken
       }
+      createdAt
+      updatedAt
     }
     comments {
       items {
         id
         content
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -116,11 +146,17 @@ export const createComment = `mutation CreateComment($input: CreateCommentInput!
       blog {
         id
         name
+        createdAt
+        updatedAt
       }
       comments {
         nextToken
       }
+      createdAt
+      updatedAt
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -134,11 +170,17 @@ export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!
       blog {
         id
         name
+        createdAt
+        updatedAt
       }
       comments {
         nextToken
       }
+      createdAt
+      updatedAt
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -152,11 +194,17 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
       blog {
         id
         name
+        createdAt
+        updatedAt
       }
       comments {
         nextToken
       }
+      createdAt
+      updatedAt
     }
+    createdAt
+    updatedAt
   }
 }
 `;

@@ -9,9 +9,13 @@ export const onCreateBlog = `subscription OnCreateBlog {
       items {
         id
         title
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -23,9 +27,13 @@ export const onUpdateBlog = `subscription OnUpdateBlog {
       items {
         id
         title
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -37,9 +45,13 @@ export const onDeleteBlog = `subscription OnDeleteBlog {
       items {
         id
         title
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -53,14 +65,20 @@ export const onCreatePost = `subscription OnCreatePost {
       posts {
         nextToken
       }
+      createdAt
+      updatedAt
     }
     comments {
       items {
         id
         content
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -74,14 +92,20 @@ export const onUpdatePost = `subscription OnUpdatePost {
       posts {
         nextToken
       }
+      createdAt
+      updatedAt
     }
     comments {
       items {
         id
         content
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -95,14 +119,20 @@ export const onDeletePost = `subscription OnDeletePost {
       posts {
         nextToken
       }
+      createdAt
+      updatedAt
     }
     comments {
       items {
         id
         content
+        createdAt
+        updatedAt
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -116,11 +146,17 @@ export const onCreateComment = `subscription OnCreateComment {
       blog {
         id
         name
+        createdAt
+        updatedAt
       }
       comments {
         nextToken
       }
+      createdAt
+      updatedAt
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -134,11 +170,17 @@ export const onUpdateComment = `subscription OnUpdateComment {
       blog {
         id
         name
+        createdAt
+        updatedAt
       }
       comments {
         nextToken
       }
+      createdAt
+      updatedAt
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -152,11 +194,17 @@ export const onDeleteComment = `subscription OnDeleteComment {
       blog {
         id
         name
+        createdAt
+        updatedAt
       }
       comments {
         nextToken
       }
+      createdAt
+      updatedAt
     }
+    createdAt
+    updatedAt
   }
 }
 `;
